@@ -19,14 +19,14 @@ class FeedViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let alert = UIAlertController(title: "Attention", message: "All Activities will be deleted", preferredStyle: UIAlertController.Style.alert)
         let OkButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (UIAlertAction) in
-            print("Silindi")
+            print("deleted")
             self.data.removeAll()
             self.data.append("---")
             UserDefaults.standard.setValue(self.data, forKey: "veri")
             self.tableView.reloadData()
         }
         let CancelButton = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { (UIAlertAction) in
-            print("Silinmedi")
+            print("deleted")
             
             
         }
